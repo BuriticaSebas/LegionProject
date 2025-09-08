@@ -1,4 +1,4 @@
-package SingletonMapArguments;
+package Singletons.SingletonMapArguments;
 
 import java.util.HashMap;
 import java.util.Map;

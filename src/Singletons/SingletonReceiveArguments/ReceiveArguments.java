@@ -1,4 +1,4 @@
-package SingletonReceiveArguments;
+package Singletons.SingletonReceiveArguments;
 
 import ValidatorParams.Algorihm.ValidateAlgorithm;
 import ValidatorParams.BattleField.ValidatorBattleField;

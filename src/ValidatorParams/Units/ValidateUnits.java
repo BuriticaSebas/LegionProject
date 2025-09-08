@@ -1,10 +1,8 @@
+
 package ValidatorParams.Units;
 
-import SingletonMapArguments.MapWithArguments;
-import SingletonReceiveArguments.ReceiveArguments;
-
-import java.util.HashMap;
-import java.util.Map;
+import Singletons.SingletonMapArguments.MapWithArguments;
+import Singletons.SingletonReceiveArguments.ReceiveArguments;
 
 public class ValidateUnits {
 
@@ -20,9 +18,32 @@ public class ValidateUnits {
         String presencia = infoDesglosada[0];
         String valor = infoDesglosada[1];
 
-        System.out.println(valor);
+
+        if (presencia.isEmpty()) {
+            System.out.println("No esta la presencia de las Unidades");
+            System.exit(2);
+        }
 
 
+
+        try{
+            String [] partes = valor.split(",");
+            int[] numeros = new int[partes.length];
+
+            //Convertimos cada pedacito a Int
+            for (int i = 0; i < partes.length; i++) {
+                numeros[i] = Integer.parseInt(partes[i].trim());
+            }
+
+
+            String tomandoValordeMapa = MapWithArguments.getGlobalArguments().get("sizeMapa");
+
+
+
+        }catch (Exception e){
+            System.out.println("Error en el parametro De Unidades");
+            System.out.println(e.getMessage());
+        }
 
     }
 }

@@ -1,7 +1,7 @@
 package ValidatorParams.Algorihm;
 
-import SingletonMapArguments.MapWithArguments;
-import SingletonReceiveArguments.ReceiveArguments;
+import Singletons.SingletonMapArguments.MapWithArguments;
+import Singletons.SingletonReceiveArguments.ReceiveArguments;
 
 import java.util.HashMap;
 import java.util.Map;

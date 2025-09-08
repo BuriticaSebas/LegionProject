@@ -1,7 +1,5 @@
-import SingletonMapArguments.MapWithArguments;
-import SingletonReceiveArguments.ReceiveArguments;
-import ValidatorParams.Algorihm.ValidateAlgorithm;
-import ValidatorParams.Type.ValidateType;
+import Singletons.SingletonMapArguments.MapWithArguments;
+import Singletons.SingletonReceiveArguments.ReceiveArguments;
 
 public class Main {
     public static void main(String[] args) {

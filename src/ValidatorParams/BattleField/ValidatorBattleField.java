@@ -1,7 +1,7 @@
 package ValidatorParams.BattleField;
 
-import SingletonMapArguments.MapWithArguments;
-import SingletonReceiveArguments.ReceiveArguments;
+import Singletons.SingletonMapArguments.MapWithArguments;
+import Singletons.SingletonReceiveArguments.ReceiveArguments;
 
 public class ValidatorBattleField {
 
