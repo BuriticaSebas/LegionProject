@@ -21,6 +21,11 @@ public class ValidateAlgorithm {
         listaPermitida.put(1, "q");
         listaPermitida.put(2, "b");
         listaPermitida.put(3, "i");
+        listaPermitida.put(4, "m");
+        listaPermitida.put(5, "s");
+        listaPermitida.put(6, "h");
+        listaPermitida.put(7, "c");
+        listaPermitida.put(8, "r");
 
         String [] infodesglosada = getinfoAlgorithm().split("=", 2);
         String presencia = infodesglosada[0];
