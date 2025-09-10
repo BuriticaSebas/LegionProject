@@ -31,11 +31,17 @@ public class ValidateUnits {
             int[] cantidadportropas = new int[partes.length];
 
             int sum = 0;
+
+
             //Convertimos cada pedacito a Int
             for (int i = 0; i < partes.length; i++) {
                 cantidadportropas[i] = Integer.parseInt(partes[i].trim());
                 sum = sum + cantidadportropas[i];
             }
+
+            String st = String.valueOf(sum);
+            MapWithArguments.getGlobalArguments().put("st", st);
+
 
             int sizeBattlefield = Integer.parseInt(MapWithArguments.getGlobalArguments().get("f"));
             int totalBattlefield = sizeBattlefield * sizeBattlefield;

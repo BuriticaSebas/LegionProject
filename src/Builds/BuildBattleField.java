@@ -8,7 +8,16 @@ import java.util.Random;
 
 public class BuildBattleField {
 
-    private static final String[][] battlefield = createBattlefield();
+    private static  String[][] battlefield = createBattlefield();
+
+
+    public static String[][] getBattlefield() {
+        return battlefield;
+    }
+
+    public static void setBattlefield(String[][] battlefield) {
+        BuildBattleField.battlefield = battlefield;
+    }
 
     public static String[][] createBattlefield(){
 

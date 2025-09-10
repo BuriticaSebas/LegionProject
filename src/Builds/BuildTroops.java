@@ -27,7 +27,6 @@ public class BuildTroops {
 
         for (int i = 0; i < partes.length; i++) {
             unidadesInt[i] = Integer.parseInt(partes[i].trim());
-            System.out.println(unidadesInt[i]);
         }
 
         int cantidadComandante = unidadesInt[0];
@@ -41,26 +40,30 @@ public class BuildTroops {
 
         // Para Integer
         if ("n".equals(parameterT)) {
-            for (int i = 0; i < cantidadComandante; i++) {
-                listaTropasInteger.add(factoryTroops.getTypeTroop("COMANDANTE", 10));
-            }
-
-            for (int i = 0; i < cantidadMedicos; i++) {
-                listaTropasInteger.add(factoryTroops.getTypeTroop("MEDIC", 20));
+            for (int i = 0; i < cantidadInfanters; i++) {
+                listaTropasInteger.add(factoryTroops.getTypeTroop("INFANTERY", 50));
             }
 
             for (int i = 0; i < cantidadTanques; i++) {
                 listaTropasInteger.add(factoryTroops.getTypeTroop("TANK", 30));
             }
 
+            for (int i = 0; i < cantidadMedicos; i++) {
+                listaTropasInteger.add(factoryTroops.getTypeTroop("MEDIC", 20));
+            }
+
             for (int i = 0; i < cantidadSnipers; i++) {
                 listaTropasInteger.add(factoryTroops.getTypeTroop("SNIPER", 40));
             }
 
-            for (int i = 0; i < cantidadInfanters; i++) {
-                listaTropasInteger.add(factoryTroops.getTypeTroop("INFANTERY", 50));
-            }
 
+
+
+
+
+            for (int i = 0; i < cantidadComandante; i++) {
+                listaTropasInteger.add(factoryTroops.getTypeTroop("COMANDANTE", 10));
+            }
 
         }
 
@@ -75,7 +78,6 @@ public class BuildTroops {
             for (int i = 0; i < cantidadInfanters; i++) {
                 listaTropasCharacter.add(factoryTroops.getTypeTroop("INFANTERY", 'O'));
             }
-
 
 
             for (int i = 0; i < cantidadSnipers; i++) {
@@ -99,22 +101,19 @@ public class BuildTroops {
     }
 
     public static void imprimirLista(){
+
         if ("c".equals(MapWithArguments.getGlobalArguments().get("t"))){
-            System.out.println(listaTropasCharacter);
-            /*for (Troops<Character> troops : listaTropasCharacter) {
+            for (Troops<Character> troops : listaTropasCharacter) {
                 System.out.println("tropas: " + troops.getCharRepresentative() + " " + troops.getRange());
-            }*/
+            }
         }
-
-
 
         if ("n".equals(MapWithArguments.getGlobalArguments().get("t"))){
-            System.out.println(listaTropasInteger);
-//            for (Troops<Integer> troops : listaTropasInteger) {
-//                System.out.println("tropas: " + troops.getCharRepresentative());
-//            }
-        }
 
+          for (Troops<Integer> troops : listaTropasInteger) {
+                System.out.println("tropas: " + troops.getCharRepresentative());
+          }
+        }
     }
 
 
