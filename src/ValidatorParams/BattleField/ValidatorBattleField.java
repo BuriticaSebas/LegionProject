@@ -25,14 +25,15 @@ public class ValidatorBattleField {
         try{
             if (valor.isEmpty()){
                 valor = "10";
+                MapWithArguments.getGlobalArguments().put(presencia,valor);
             }
 
 
             int tamanoCampo = Integer.parseInt(valor.trim());
 
 
-            if(tamanoCampo < 5 || tamanoCampo > 80){
-                System.out.println("El valor debe estar entre 5 y 80");
+            if(tamanoCampo < 5 || tamanoCampo > 1000){
+                System.out.println("El valor debe estar entre 5 y 1000");
                 System.exit(2);
             }
 
